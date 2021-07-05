@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block header%}Home{%endblock%}
+{% block content %} 
+
+{% load static %} 
+
+<!-- <div class="item">
+    <ul class="menu">
+        <img src="/static/images/pic.png" class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+    
+      </ul>
+</div> -->
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Criminal Updates</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li class="active">Criminal Updates</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-header">Criminal Updates</div>
+            <div class="card-body card-block">
+                <form action="" method="post" class="">
+                    <div class="card-body card-block">
+                        <form action="" method="post" class="form-horizontal">
+                            {% csrf_token %}
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-email" class=" form-control-label">First Name</label></div>
+                                <div class="col-12 col-md-6"><input type="text id="hf-text" name="f_name" placeholder="Enter First Name.." required class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-email" class=" form-control-label">Middle Name</label></div>
+                                <div class="col-12 col-md-6"><input type="text id="hf-text" name="middle_name" placeholder="Enter Middle Name.." required class="form-control"></div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-email" class=" form-control-label">Last Name</label></div>
+                                <div class="col-12 col-md-6"><input type="text id="hf-text" name="l_name" placeholder="Enter Last Name.." required class="form-control"></div>
+                            </div>
+
+                            <!-- <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-email" class=" form-control-label">Citizenship</label></div>
+                                <div class="col-12 col-md-6"><select name="select" id="select" class="form-control-label" required ><option value="0">Please select Citizenship</option>
+                                    <option value="1">Tanzanian</option>
+                                    <option value="1">Kenyan</option>
+                                    <option value="1">Ugandan</option></select></div>
+                                
+                            </div>
+                             -->
+                        
+                            <div class="row form-group">
+                                    <div class="col col-md-3"><label for="hf-email" class=" form-control-label">NIDA ID</label></div>
+                                    <div class="col-12 col-md-6"><input type="text" id="hf-text" name="nida_id" placeholder="Enter Nida ID..." required class="form-control"></div>
+                                </div>
+                            <!-- <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-email" class=" form-control-label">Criminal Status</label></div>
+                                <div class="col-12 col-md-6"><select name="select" id="select" class="form-control-label">
+                                    <option value="1">YES</option><option value="1">NO</option></select></div> -->
+                                
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3"><label for="hf-password" class=" form-control-label">Criminal Description</label></div>
+                                <div class="col-12 col-md-9"><input type="text" id="hf-text" name="criminal_desc" placeholder="Criminal Description..." required class="form-control"></div>
+                            </div>
+
+                            &nbsp; <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm">SUBMIT</button></div>
+                       
+                        </form>
+                    
+                    </div>
+                   
+                </div>
+        
+        
+            </div>
+         
+        </div>
+    
+    </div>
+
+</div>
+   
+{% endblock %}
+
